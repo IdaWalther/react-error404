@@ -1,5 +1,4 @@
 import FrontPage from "./pages/frontPage/FrontPage"
-
 import { useEffect } from "react"
 import useFavoriteStore from "./store/favorites-store";
 import './App.css'
