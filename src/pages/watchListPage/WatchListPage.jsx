@@ -1,8 +1,7 @@
 import React from 'react'
 import Header from '../../components/header/Header'
 
-
-function FavoritesPage() {
+function WatchListPage() {
     return (
         <>
             <Header />
@@ -10,4 +9,4 @@ function FavoritesPage() {
     )
 }
 
-export default FavoritesPage
+export default WatchListPage
