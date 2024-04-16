@@ -1,3 +1,5 @@
+import FrontPage from "./pages/frontPage/FrontPage"
+
 import { useEffect } from "react"
 import useFavoriteStore from "./store/favorites-store";
 import './App.css'
@@ -22,11 +24,10 @@ function App() {
 
 
 }, []);
-
-
   return (
     <>
       <Routes>
+        <Route path="/" element={<FrontPage/>}/>
         <Route path="/FavoritesPage" element={<FavoritesPage />} />
         <Route path="/WatchList" element={<WatchListPage />} />
       </Routes>
