@@ -1,10 +1,11 @@
 import React from 'react'
+import Header from '../../components/header/Header'
 
 function WatchListPage() {
     return (
-        <div>
-
-        </div>
+        <>
+            <Header />
+        </>
     )
 }
 

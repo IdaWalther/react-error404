@@ -1,13 +1,17 @@
-import Header from "./components/header/Header"
 import './App.css'
+import { Routes, Route } from 'react-router-dom';
+import FavoritesPage from './pages/favoritesPage/FavoritesPage';
+import WatchListPage from './pages/watchListPage/WatchListPage';
 
 function App() {
 
 
   return (
     <>
-      <Header />
-      <div className="härLiggerAlltIMain"></div>
+      <Routes>
+        <Route path="/FavoritesPage" element={<FavoritesPage />} />
+        <Route path="/WatchList" element={<WatchListPage />} />
+      </Routes>
     </>
   )
 }
