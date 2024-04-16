@@ -2,11 +2,11 @@ import { create } from "zustand";
 
 const useFavoriteStore = create((set) => ({
 
-    favorite: [],
+    favorites: [],
 
-    setFavorite: (newFavorite) => set({ favorite: newFavorite}),
+    setFavorites: (newFavorites) => set({ favorite: newFavorites})
     
 
-}))
+}));
 
 export default useFavoriteStore;
