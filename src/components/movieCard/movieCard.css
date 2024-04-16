@@ -1,0 +1,20 @@
+.movie-card {
+    padding: .5rem 1rem;
+    background-color: var(--dark-gray);
+    color: var(--whiteish);
+    max-width: 300px;
+}
+
+.movie-card__poster {
+    max-width: 100%;
+}
+
+.movie-card__title {
+    font-family: var(--header-font);
+    font-size: 1.2em;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    margin-bottom: .5rem;
+}
+
