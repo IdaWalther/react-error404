@@ -4,7 +4,7 @@ const useFavoriteStore = create((set) => ({
 
     favorites: [],
 
-    setFavorites: (newFavorites) => set({ favorite: newFavorites})
+    setFavorites: (newFavorites) => set({ favorites: newFavorites})
     
 
 }));

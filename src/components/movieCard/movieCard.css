@@ -1,12 +1,14 @@
 .movie-card {
-    padding: .5rem 1rem;
+    padding: 1rem 1.5rem;
     background-color: var(--dark-gray);
     color: var(--whiteish);
-    max-width: 300px;
+    display: grid;
+
 }
 
 .movie-card__poster {
     max-width: 100%;
+    margin: auto;
 }
 
 .movie-card__title {

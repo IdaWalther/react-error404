@@ -1,6 +1,6 @@
 import "./movieCard.css"
 
-function MovieCard({ poster, title }) {
+function MovieCard({ poster, title}) {
     return (
         <figure className="movie-card">
             <figcaption className="movie-card__title">{title}</figcaption>

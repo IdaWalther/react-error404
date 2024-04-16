@@ -10,8 +10,9 @@ function App() {
   const {setFavorites} = useFavoriteStore();
 
   useEffect(() => {
+    
 
-    const savedFavorites = localStorage.getItem('favorites');
+    const savedFavorites = localStorage.getItem("favorites");
 
     if (savedFavorites) {
 

@@ -1,7 +1,8 @@
 :root {
   --blackish: #0B0B0C;
   --whiteish: #fffef9;
-  --dark-gray: #363434;
+  --dark-gray: #1a1a1a;
+  --yellow: #f4ec1c;
 
   --header-font: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
@@ -15,8 +16,9 @@
 body {
   max-width: 1200px;
   margin: 0 auto;
+  background-color: var(--blackish);
 }
 
 main {
-  margin-top: 5rem;
+   padding-top: 10rem; /*Ändrade från margin-top till padding top. */
 }
