@@ -1,5 +1,5 @@
 :root {
-  --blackish: #444;
+  --blackish: #0B0B0C;
 }
 
 
@@ -11,4 +11,6 @@
 
 body {
   max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--blackish);
 }

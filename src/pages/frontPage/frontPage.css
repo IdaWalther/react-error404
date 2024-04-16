@@ -1,0 +1,13 @@
+.frontPage {
+    background-color: var(blackish);
+}
+.frontPage h2 {
+    text-align: center;
+    margin: 1rem 0;
+}
+.frontPageTopWrapper {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
