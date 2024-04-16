@@ -1,10 +1,16 @@
-import './trailer.css'
-
-function Trailer({}) {
+function Trailer({movie, trailer,index}) {
+    console.log(movie)
     return (
-        <div className="carousel">
-            <h1>Trailer</h1>
-        </div>
+            <article className="slide">
+                <iframe
+                    width="560" 
+                    height="315" 
+                    src={trailer} 
+                    title={movie.title}
+                    allowFullScreen
+                >
+                </iframe>
+            </article>
     )
 }
 

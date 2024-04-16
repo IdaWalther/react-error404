@@ -11,3 +11,27 @@
     flex-wrap: wrap;
     gap: 1rem;
 }
+.carousel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    max-width: 50%;
+    margin: 2rem auto;
+}
+.btnNext {
+    position: absolute;
+    top: 40%;
+    right: -2rem;
+}
+
+.btnNext img, .btnPrev img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+}
+
+.btnPrev {
+    position: absolute;
+    top: 40%;
+    left: -2rem;
+}
