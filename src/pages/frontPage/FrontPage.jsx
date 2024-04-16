@@ -1,7 +1,7 @@
 import Trailer from '../../components/trailer/Trailer';
 import backArrow from '../../assets/back-arrow.svg';
 import nextArrow from '../../assets/next-arrow.svg';
-//import MovieCard from '../../components/movieCard/MovieCard';
+import MovieCard from '../../components/movieCard/MovieCard';
 
 import './frontPage.css';
 import useTop20Store from '../../store/top20-store';
@@ -74,13 +74,13 @@ function FrontPage() {
             <h2>Top 20 suggestions</h2>
             <section className="frontPageTopWrapper">
                 {
-                    /*top20.map(movie => {
+                    top20.map(movie => {
                         return <MovieCard 
                             poster={movie.poster}
                             title = {movie.title}
                             key= {movie.imdbid}  
                         />
-                    }) */
+                    }) 
                 }
             </section>
         </div>

@@ -9,6 +9,7 @@ function App() {
   return (
     <>
       <Routes>
+        <Route path="/" element={<FrontPage/>}/>
         <Route path="/FavoritesPage" element={<FavoritesPage />} />
         <Route path="/WatchList" element={<WatchListPage />} />
       </Routes>
