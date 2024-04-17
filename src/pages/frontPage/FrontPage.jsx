@@ -83,6 +83,7 @@ function FrontPage() {
                             key= {movie.imdbid}
                             favoriteToHandle={movie}
                             imdbid={movie.imdbid}
+                            filmToHandle={movie}
                         />
                     }) 
                 }
