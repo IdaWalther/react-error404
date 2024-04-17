@@ -9,6 +9,7 @@ const useWatchlistStore = create((set) => ({
     handleFilmToWatch: (filmToWatch, event) => set((state) => {
 
         event.stopPropagation();
+        event.preventDefault();
 
         const convertKeysToLowerCase = (obj) => {
             const newObj = {};

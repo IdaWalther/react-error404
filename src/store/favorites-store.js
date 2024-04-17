@@ -9,6 +9,7 @@ const useFavoriteStore = create((set) => ({
     handleFavorite: (favoriteToHandle, event) => set((state) => {
 
         event.stopPropagation();
+        event.preventDefault();
 
         const convertKeysToLowerCase = (obj) => {
             const newObj = {};

@@ -18,6 +18,7 @@ function WatchListPage() {
                             poster={filmToWatch.poster}
                             filmToHandle={filmToWatch}
                             key={filmToWatch.imdbid}
+                            imdbid={filmToWatch.imdbid}
                         />)
                 })}
 
