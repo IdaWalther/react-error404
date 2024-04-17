@@ -1,4 +1,3 @@
-import React from 'react'
 import Header from '../../components/header/Header'
 import useFavoriteStore from "../../store/favorites-store";
 import MovieCard from '../../components/movieCard/MovieCard';
@@ -17,7 +16,7 @@ function FavoritesPage() {
                         <MovieCard
                             title={favorite.title}
                             poster={favorite.poster}
-                            favoriteToHandle={favorite}
+                            filmToHandle={favorite}
                             key={favorite.imdbid}
                         />)
                 })}

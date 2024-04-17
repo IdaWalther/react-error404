@@ -81,7 +81,7 @@ function FrontPage() {
                             poster={movie.poster}
                             title = {movie.title}
                             key= {movie.imdbid}
-                            favoriteToHandle={movie}
+                            filmToHandle={movie}
                         />
                     }) 
                 }

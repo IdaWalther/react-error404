@@ -22,9 +22,8 @@
     margin-bottom: .5rem;
 }
 
-.movie-card__favorite-icon {
+.movie-card__icon {
     all: unset;
-    background-image: url(../../assets/not-filled-heart.svg);
     aspect-ratio: 1;
     width: 40px;
     background-color: var(--yellow);
@@ -32,8 +31,20 @@
     background-size: contain;
     background-position: center;
     position: absolute;
-    top: 15%;
-    right: 15%;
     cursor: pointer;
 }
+
+.movie-card__icon--favorite {
+    background-image: url(../../assets/not-filled-heart.svg);
+    top: 15%;
+    right: 15%;
+}
+
+.movie-card__icon--watchlist {
+    top: 15%;
+    right: 30%;
+    background-image: url(../../assets/add-to-watchlist.svg);
+}
+
+
 
