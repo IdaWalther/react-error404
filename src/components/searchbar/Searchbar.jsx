@@ -1,12 +1,15 @@
 import './searchbar.css'
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
+import MovieCard from '../movieCard/MovieCard'
+
 
 function Searchbar() {
 
     const [movies, setMovies] = useState([]);
     const [searchInput, setSearchInput] = useState('');
     const [dropdownOpen, setDropdownOpen] = useState(false);
+    const [showMovieCard, setShowMovieCard] = useState(false);
 
     useEffect(() => {
         const getMovies = () => {
@@ -15,6 +18,7 @@ function Searchbar() {
                     console.log('Movies data:', response.data);
                     // Uppdaterar State med de hämtade filmerna
                     setMovies(response.data.Search || []);
+                    console.log(response.data.Search)
                 })
                 .catch(error => {
                     console.error('Error fetching movies:', error);
@@ -41,6 +45,12 @@ function Searchbar() {
         setDropdownOpen(false);
     };
 
+    const handleSearchButtonClick = (event) => {
+        event.preventDefault()
+        setDropdownOpen(false);
+        setShowMovieCard(true);
+    };
+
     return (
         <form className='searchbar-container'>
             <div className="dropdown-container">
@@ -65,14 +75,25 @@ function Searchbar() {
             {/* Input Searchbar och onChange  */}
             <input
                 className='searchbar'
-                // id="searchInput"
                 type="text"
                 placeholder="search movie..."
                 value={searchInput}
                 onChange={handleInputChange}
             />
             {/* Input searchBtn */}
-            <input className='searchbar-btn' type="submit" value="find movie" />
+            <input className='searchbar-btn'
+                type="submit"
+                value="find movie"
+                onClick={handleSearchButtonClick}
+            />
+            {showMovieCard && movies.map((movie, index) => (
+                <MovieCard
+                    key={index}
+                    poster={movie.Poster}
+                    title={movie.Title}
+                    imdbid={movie.imdbID}
+                />
+            ))}
         </form>
     )
 }
