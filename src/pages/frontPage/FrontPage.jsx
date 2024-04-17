@@ -78,7 +78,8 @@ function FrontPage() {
                         return <MovieCard 
                             poster={movie.poster}
                             title = {movie.title}
-                            key= {movie.imdbid}  
+                            key= {movie.imdbid}
+                            favoriteToHandle={movie}
                         />
                     }) 
                 }

@@ -12,7 +12,6 @@ function App() {
 
   useEffect(() => {
     
-
     const savedFavorites = localStorage.getItem("favorites");
 
     if (savedFavorites) {
@@ -21,8 +20,8 @@ function App() {
 
     }
 
-
 }, []);
+
   return (
     <>
       <Routes>

@@ -3,20 +3,36 @@
     background-color: var(--dark-gray);
     color: var(--whiteish);
     display: grid;
+    max-width: 360px;
+    position: relative;
 
 }
 
 .movie-card__poster {
-    max-width: 100%;
-    margin: auto;
+    width: 100%;
+    aspect-ratio: 2/3;
 }
 
 .movie-card__title {
     font-family: var(--header-font);
-    font-size: 1.2em;
+    font-size: 1.2rem;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     margin-bottom: .5rem;
+}
+
+.movie-card__favorite-icon {
+    all: unset;
+    background-image: url(../../assets/not-filled-heart.svg);
+    aspect-ratio: 1;
+    width: 40px;
+    background-color: var(--yellow);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    top: 15%;
+    right: 15%;
 }
 

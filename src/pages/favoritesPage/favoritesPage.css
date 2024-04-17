@@ -23,5 +23,6 @@
     height: .5rem;
     width: 110%;
     content: "";
+    margin-top: 2px;
     rotate: -1deg;
 }
