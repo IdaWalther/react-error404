@@ -6,6 +6,7 @@ import './App.css'
 import { Routes, Route } from 'react-router-dom';
 import FavoritesPage from './pages/favoritesPage/FavoritesPage';
 import WatchListPage from './pages/watchListPage/WatchListPage';
+import DetailsPage from "./pages/detailsPage/DetailsPage";
 
 function App() {
 
@@ -35,6 +36,7 @@ function App() {
         <Route path="/" element={<FrontPage />} />
         <Route path="/FavoritesPage" element={<FavoritesPage />} />
         <Route path="/WatchList" element={<WatchListPage />} />
+        <Route path="/detailspage/:id" element={<DetailsPage />} />
       </Routes>
     </>
   )

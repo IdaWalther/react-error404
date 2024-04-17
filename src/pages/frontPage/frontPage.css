@@ -17,12 +17,12 @@
     display: flex;
     justify-content: center;
     max-width: 50%;
-    margin: 2rem auto;
+    margin: 0 auto;
     padding-top: 10rem;
 }
 .btnNext {
     position: absolute;
-    top: 40%;
+    top: 65%;
     right: -2rem;
 }
 
@@ -30,10 +30,11 @@
     width: 40px;
     height: 40px;
     cursor: pointer;
+    background-color: var(--yellow);
 }
 
 .btnPrev {
     position: absolute;
-    top: 40%;
+    top: 65%;
     left: -2rem;
 }
