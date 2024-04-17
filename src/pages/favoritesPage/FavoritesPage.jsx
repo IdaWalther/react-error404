@@ -18,6 +18,7 @@ function FavoritesPage() {
                             poster={favorite.poster}
                             filmToHandle={favorite}
                             key={favorite.imdbid}
+                            imdbid={favorite.imdbid}
                         />)
                 })}
 
