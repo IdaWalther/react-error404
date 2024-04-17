@@ -1,7 +1,7 @@
 import {useState, useEffect} from 'react';
 import {useParams} from 'react-router-dom';
 import axios from 'axios';
-
+import './detailsPage.css';
 
 function DetailsPage({imdbid}) {
     const {id} = useParams();
@@ -17,18 +17,22 @@ function DetailsPage({imdbid}) {
     }, [])
 
     return (
-        <>
-        <h1>DetailsPage</h1>
                 <article className="detail-info">
-                    <h2>{activeMovie.Title}</h2>
-                    <p>{activeMovie.imdbRating}</p>
+                    <section>
+                        <p className="bold">{activeMovie.Title}</p>
+                        <p className="bold">Imdb Rating: {activeMovie.imdbRating}</p>
+                    </section>
+                    <section>
+                        <img src={activeMovie.Poster} alt={`Poster of the movie ${activeMovie.Title}`} />
+                        <p>{activeMovie.Plot}</p>
+                    </section>
+                    <p className="bold">Actors:</p>
                     <p>{activeMovie.Actors}</p>
-                    <p>{activeMovie.Director}</p>
-                    <p>{activeMovie.Plot}</p>
+                    <p className="bold">Director:</p>
+                    <p>{activeMovie.Director}</p> 
+                    <p className="bold">Genres:</p>                   
                     <p>{activeMovie.Genre}</p>
-                    <img src={activeMovie.Poster} alt={`Poster of the movie ${activeMovie.Title}`} />
                 </article>  
-        </>
     )
 }
 
