@@ -37,6 +37,7 @@ function Searchbar() {
     const handleInputChange = (event) => {
         setSearchInput(event.target.value);
         setDropdownOpen(true);
+        setShowMovieCard(false);
     };
 
     // vid vald film - lägger in den valda filmen i inputfältet samt stänger dropdown
