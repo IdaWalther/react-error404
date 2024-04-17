@@ -1,20 +1,50 @@
 .movie-card {
-    padding: .5rem 1rem;
+    padding: 1rem 1.5rem;
     background-color: var(--dark-gray);
     color: var(--whiteish);
-    max-width: 300px;
+    display: grid;
+    max-width: 360px;
+    position: relative;
+
 }
 
 .movie-card__poster {
-    max-width: 100%;
+    width: 100%;
+    aspect-ratio: 2/3;
 }
 
 .movie-card__title {
     font-family: var(--header-font);
-    font-size: 1.2em;
+    font-size: 1.2rem;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
     margin-bottom: .5rem;
 }
+
+.movie-card__icon {
+    all: unset;
+    aspect-ratio: 1;
+    width: 40px;
+    background-color: var(--yellow);
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center;
+    position: absolute;
+    cursor: pointer;
+}
+
+.movie-card__icon--favorite {
+    background-image: url(../../assets/not-filled-heart.svg);
+    top: 15%;
+    right: 15%;
+}
+
+.movie-card__icon--watchlist {
+    top: 15%;
+    right: 30%;
+    background-image: url(../../assets/add-to-watchlist.svg);
+}
+
+
 

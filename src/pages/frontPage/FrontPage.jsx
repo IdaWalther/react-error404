@@ -7,6 +7,7 @@ import './frontPage.css';
 import useTop20Store from '../../store/top20-store';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import Header from '../../components/header/Header';
 
 const shuffleArray= (array) => {
     for(let i = array.length - 1; i > 0; i--) {
@@ -51,6 +52,7 @@ function FrontPage() {
 
     return (
         <div className="frontPage">
+            <Header />
             <section className="carousel"> 
                 {
                     fiveMovies.map((movie, index) => (
@@ -71,14 +73,16 @@ function FrontPage() {
                     <img src={backArrow} alt="previous arrow"/> 
                 </button> 
             </section>
-            <h2>Top 20 suggestions</h2>
+            <h2 className="headerTop20">Top 20 suggestions</h2>
             <section className="frontPageTopWrapper">
                 {
                     top20.map(movie => {
                         return <MovieCard 
                             poster={movie.poster}
                             title = {movie.title}
-                            key= {movie.imdbid}  
+                            key= {movie.imdbid}
+                            imdbid={movie.imdbid}
+                            filmToHandle={movie}
                         />
                     }) 
                 }
