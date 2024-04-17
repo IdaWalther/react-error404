@@ -3,7 +3,7 @@ import useFavoriteStore from "../../store/favorites-store";
 import {Link} from 'react-router-dom'; 
 import useWatchlistStore from "../../store/watchlist-store";
 
-function MovieCard({ poster, title, favoriteToHandle, imdbid}) {
+function MovieCard({ poster, title, filmToHandle, imdbid}) {
     const handleFavorite = useFavoriteStore((state) => state.handleFavorite);
     const handleFilmToWatch = useWatchlistStore((state) => state.handleFilmToWatch);
 
