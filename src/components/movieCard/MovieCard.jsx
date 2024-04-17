@@ -6,7 +6,7 @@ function MovieCard({ poster, title, favoriteToHandle, imdbid}) {
     const handleFavorite = useFavoriteStore((state) => state.handleFavorite);
 
     return (
-        <Link to={`/details/${imdbid}`}>
+        <Link to={`/detailspage/${imdbid}`}>
             <figure className="movie-card">
                 <figcaption className="movie-card__title">{title}</figcaption>
                 <button className="movie-card__favorite-icon" onClick={(event) => handleFavorite(favoriteToHandle, event)}></button>
