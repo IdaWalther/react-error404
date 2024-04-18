@@ -20,5 +20,23 @@ body {
 }
 
 main {
-   padding-top: 10rem; /*Ändrade från margin-top till padding top. */
+  padding-top: 10rem;
+  /*Ändrade från margin-top till padding top. */
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(195, 195, 195);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(62, 62, 62);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ceba23;
 }

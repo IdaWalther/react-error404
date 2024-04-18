@@ -2,10 +2,11 @@
     width: 90%;
     margin: 2rem auto;
     color: var(--whiteish);
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
     padding: 2rem;
     padding-top: 10rem;
     border-radius: 1rem;
+    font-family: var(--header-font);
 }
 
 .detail-info section {
@@ -18,7 +19,6 @@
 
 .bold {
     font-weight: bold;
-    font-size:1.3rem;
+    font-size: 1.3rem;
     margin-top: 1rem;
 }
-
