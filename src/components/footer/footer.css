@@ -2,9 +2,37 @@
     position: fixed;
     bottom: 0;
     text-align: center;
+    max-width: 1200px;
     width: 100%;
     margin: 0 auto;
     background-color: var(--blackish);
     padding: 1rem;
     font-size: .8rem;
+    display: grid;
+}
+
+.footer-section__title {
+    grid-column: 1/-1;
+    color: var(--whiteish);
+    font-family: var(--header-font);
+    display: grid;
+    align-self: center;
+    justify-self: center;
+    margin-bottom: 2rem;
+}
+
+.footer-section__title::after {
+    background: linear-gradient(359deg, var(--yellow) 40%, var(--blackish) 50%);
+    height: .5rem;
+    width: 110%;
+    content: "";
+    margin-top: 2px;
+    rotate: 1deg;
+}
+
+.footer-btn {
+    background: transparent;
+    border: none;
+    align-self: center;
+    justify-self: center;
 }
