@@ -4,6 +4,7 @@
     color: var(--whiteish);
     background-color: rgba(0,0,0,0.7);
     padding: 2rem;
+    padding-top: 10rem;
     border-radius: 1rem;
 }
 

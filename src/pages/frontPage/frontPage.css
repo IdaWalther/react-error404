@@ -1,17 +1,3 @@
-.frontPage {
-    background-color: var(blackish);
-}
-.headerTop20 {
-    text-align: center;
-    margin: 1rem 0;
-    color: var(--whiteish);
-}
-.frontPageTopWrapper {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 1rem;
-}
 .carousel {
     position: relative;
     display: flex;
@@ -19,6 +5,7 @@
     max-width: 50%;
     margin: 0 auto;
     padding-top: 10rem;
+    margin-bottom: -10rem;
 }
 .btnNext {
     position: absolute;
