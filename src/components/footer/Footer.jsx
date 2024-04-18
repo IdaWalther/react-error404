@@ -3,7 +3,7 @@ import './footer.css';
 function Footer () {
     return (
         <footer className='footer'>
-            <p>© 2024 - Error 404 My Movie Database </p>
+            <button className="footer-btn" onClick={() => window.scrollTo({top: 0, behavior:'smooth'})}><h2 className="footer-section__title">Back to top</h2></button>
         </footer>
     )
 }
