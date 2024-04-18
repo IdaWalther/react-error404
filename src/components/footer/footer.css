@@ -16,18 +16,16 @@
     color: var(--whiteish);
     font-family: var(--header-font);
     display: grid;
-    align-self: center;
-    justify-self: center;
     margin-bottom: 2rem;
 }
 
 .footer-section__title::after {
     background: linear-gradient(359deg, var(--yellow) 40%, var(--blackish) 50%);
     height: .5rem;
-    width: 110%;
+    width: 100%;
     content: "";
     margin-top: 2px;
-    rotate: 1deg;
+    rotate: 4deg;
 }
 
 .footer-btn {
