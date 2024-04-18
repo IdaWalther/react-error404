@@ -22,3 +22,11 @@ body {
 main {
    padding-top: 10rem; /*Ändrade från margin-top till padding top. */
 }
+
+a {
+  text-decoration: none;
+}
+
+.d-none {
+  display: none;
+}

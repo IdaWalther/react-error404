@@ -6,13 +6,13 @@ import Footer from '../../components/footer/Footer';
 
 function SearchPage() {
     const { movies } = useSearchStore();
-    console.log(movies);
+
     return (
         <>
             <Header />
             <MainSection
                 array={movies}
-                mainTitle={"your searchresults:"}
+                mainTitle={"Search results:"}
             />
             <Footer />
         </>
