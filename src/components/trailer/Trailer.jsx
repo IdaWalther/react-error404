@@ -1,5 +1,5 @@
 function Trailer({movie, trailer,index}) {
-    console.log(movie)
+
     return (
             <article className="slide">
                 <iframe

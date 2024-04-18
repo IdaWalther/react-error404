@@ -11,7 +11,7 @@ function WatchListPage() {
             <Header />
             <MainSection
                 array={watchlist}
-                mainTitle={"YOUR WATCHLIST"}
+                mainTitle={"your watchlist:"}
             />
         </>
     )

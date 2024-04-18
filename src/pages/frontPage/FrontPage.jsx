@@ -74,7 +74,6 @@ function FrontPage() {
                     <img src={backArrow} alt="previous arrow"/> 
                 </button> 
             </section>
-            <h2 className="headerTop20">Top 20 suggestions</h2>
                 <MainSection
                     array={top20}
                     mainTitle={"TOP 20 LIST:"}
