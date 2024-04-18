@@ -1,6 +1,6 @@
 import Header from '../../components/header/Header'
+import MainSection from '../../components/mainSection/MainSection';
 import useFavoriteStore from "../../store/favorites-store";
-import MovieCard from '../../components/movieCard/MovieCard';
 import "./favoritesPage.css";
 
 function FavoritesPage() {
@@ -9,20 +9,10 @@ function FavoritesPage() {
     return (
         <>
             <Header />
-            <main className="favorites">
-                <h1 className="favorites__headtitle">YOUR FAVORITES:</h1>
-                {favorites.map(favorite => {
-                    return (
-                        <MovieCard
-                            title={favorite.title}
-                            poster={favorite.poster}
-                            filmToHandle={favorite}
-                            key={favorite.imdbid}
-                            imdbid={favorite.imdbid}
-                        />)
-                })}
-
-            </main>
+            <MainSection
+                array={favorites}
+                mainTitle={"YOUR FAVORITES:"}
+            />
         </>
     )
 }

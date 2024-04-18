@@ -1,24 +1,27 @@
 import './searchbar.css'
 import axios from 'axios';
 import React, { useState, useEffect } from 'react';
-import MovieCard from '../movieCard/MovieCard'
+import { useNavigate } from 'react-router-dom';
+import useSearchStore from '../../store/search-store';
 
 
 function Searchbar() {
 
-    const [movies, setMovies] = useState([]);
     const [searchInput, setSearchInput] = useState('');
     const [dropdownOpen, setDropdownOpen] = useState(false);
-    const [showMovieCard, setShowMovieCard] = useState(false);
+    const navigate = useNavigate();
+    const { movies} = useSearchStore();
+    const setMovies = useSearchStore((state)=> state.setMovies);
+
 
     useEffect(() => {
         const getMovies = () => {
             axios.get(`http://www.omdbapi.com/?apikey=16ca3eb4&s=${searchInput}`)
                 .then(response => {
-                    console.log('Movies data:', response.data);
+
                     // Uppdaterar State med de hämtade filmerna
                     setMovies(response.data.Search || []);
-                    console.log(response.data.Search)
+                   
                 })
                 .catch(error => {
                     console.error('Error fetching movies:', error);
@@ -28,28 +31,28 @@ function Searchbar() {
         //Om searchInput är tom - getMovie annars setMovies (visa respons.data.search)
         if (searchInput !== '') {
             getMovies();
-        } else {
-            setMovies([]);
-        }
+        } 
     }, [searchInput]);
 
     // Uppdaterar SearchInput när "value" förändras + öppnar dropdownMenyn
     const handleInputChange = (event) => {
         setSearchInput(event.target.value);
         setDropdownOpen(true);
-        setShowMovieCard(false);
     };
 
     // vid vald film - lägger in den valda filmen i inputfältet samt stänger dropdown
     const handleMovieSelect = (movieTitle) => {
         setSearchInput(movieTitle);
         setDropdownOpen(false);
+        navigate("/SearchPage/");
     };
 
     const handleSearchButtonClick = (event) => {
         event.preventDefault()
         setDropdownOpen(false);
-        setShowMovieCard(true);
+
+            navigate("/SearchPage/");
+
     };
 
     return (
@@ -63,11 +66,11 @@ function Searchbar() {
                             <div
                                 key={index}
                                 className="dropdown-item"
-                                onClick={() => handleMovieSelect(movie.Title)}
+                                onClick={() => handleMovieSelect(movie.title)}
                             >
                                 {/* Vad som visas i dropdown */}
-                                <span>{movie.Title}</span>
-                                {movie.Poster && <img className='dropdown-moviePoster' src={movie.Poster} alt="movie-poster" />}
+                                <span>{movie.title}</span>
+                                {movie.poster && <img className='dropdown-moviePoster' src={movie.poster} alt="movie-poster" />}
                             </div>
                         ))}
                     </div>
@@ -82,19 +85,13 @@ function Searchbar() {
                 onChange={handleInputChange}
             />
             {/* Input searchBtn */}
+
             <input className='searchbar-btn'
                 type="submit"
                 value="find movie"
                 onClick={handleSearchButtonClick}
             />
-            {showMovieCard && movies.map((movie, index) => (
-                <MovieCard
-                    key={index}
-                    poster={movie.Poster}
-                    title={movie.Title}
-                    imdbid={movie.imdbID}
-                />
-            ))}
+
         </form>
     )
 }

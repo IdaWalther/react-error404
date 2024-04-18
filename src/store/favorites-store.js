@@ -10,7 +10,7 @@ const useFavoriteStore = create((set) => ({
 
         event.stopPropagation();
         event.preventDefault();
-
+        
         const convertKeysToLowerCase = (obj) => {
             const newObj = {};
             for (let key in obj) {
