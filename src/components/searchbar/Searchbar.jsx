@@ -10,18 +10,15 @@ function Searchbar() {
     const [searchInput, setSearchInput] = useState('');
     const [dropdownOpen, setDropdownOpen] = useState(false);
     const navigate = useNavigate();
-    const { movies} = useSearchStore();
-    const setMovies = useSearchStore((state)=> state.setMovies);
-
+    const { movies } = useSearchStore();
+    const setMovies = useSearchStore((state) => state.setMovies);
 
     useEffect(() => {
         const getMovies = () => {
             axios.get(`http://www.omdbapi.com/?apikey=16ca3eb4&s=${searchInput}`)
                 .then(response => {
-
                     // Uppdaterar State med de hämtade filmerna
                     setMovies(response.data.Search || []);
-                   
                 })
                 .catch(error => {
                     console.error('Error fetching movies:', error);
@@ -31,7 +28,7 @@ function Searchbar() {
         //Om searchInput är tom - getMovie annars setMovies (visa respons.data.search)
         if (searchInput !== '') {
             getMovies();
-        } 
+        }
     }, [searchInput]);
 
     // Uppdaterar SearchInput när "value" förändras + öppnar dropdownMenyn
@@ -41,18 +38,16 @@ function Searchbar() {
     };
 
     // vid vald film - lägger in den valda filmen i inputfältet samt stänger dropdown
-    const handleMovieSelect = (movieTitle) => {
-        setSearchInput(movieTitle);
+    const handleMovieSelect = (movie) => {
+        setSearchInput(movie.Title);
         setDropdownOpen(false);
-        navigate("/SearchPage/");
+        navigate(`/detailsPage/${movie.imdbid}`);
     };
 
     const handleSearchButtonClick = (event) => {
         event.preventDefault()
         setDropdownOpen(false);
-
-            navigate("/SearchPage/");
-
+        navigate("/SearchPage/");
     };
 
     return (
@@ -66,7 +61,7 @@ function Searchbar() {
                             <div
                                 key={index}
                                 className="dropdown-item"
-                                onClick={() => handleMovieSelect(movie.title)}
+                                onClick={() => handleMovieSelect(movie)}
                             >
                                 {/* Vad som visas i dropdown */}
                                 <span>{movie.title}</span>
@@ -85,13 +80,11 @@ function Searchbar() {
                 onChange={handleInputChange}
             />
             {/* Input searchBtn */}
-
             <input className='searchbar-btn'
                 type="submit"
                 value="find movie"
                 onClick={handleSearchButtonClick}
             />
-
         </form>
     )
 }
