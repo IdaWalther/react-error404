@@ -1,14 +1,13 @@
 import Trailer from '../../components/trailer/Trailer';
 import backArrow from '../../assets/back-arrow.svg';
 import nextArrow from '../../assets/next-arrow.svg';
-import MovieCard from '../../components/movieCard/MovieCard';
-
 import './frontPage.css';
 import useTop20Store from '../../store/top20-store';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 import Header from '../../components/header/Header';
 import MainSection from '../../components/mainSection/MainSection';
+import Footer from '../../components/footer/Footer';
 
 const shuffleArray= (array) => {
     for(let i = array.length - 1; i > 0; i--) {
@@ -78,6 +77,7 @@ function FrontPage() {
                     array={top20}
                     mainTitle={"TOP 20 LIST:"}
                 />
+                <Footer />
         </div>
     );
 }

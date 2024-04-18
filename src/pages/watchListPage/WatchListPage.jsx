@@ -1,7 +1,7 @@
 import Header from '../../components/header/Header'
 import useWatchlistStore from "../../store/watchlist-store";
-import "./watchListPage.css";
 import MainSection from '../../components/mainSection/MainSection';
+import Footer from '../../components/footer/Footer';
 
 function WatchListPage() {
     const { watchlist } = useWatchlistStore();
@@ -13,6 +13,7 @@ function WatchListPage() {
                 array={watchlist}
                 mainTitle={"your watchlist:"}
             />
+            <Footer />
         </>
     )
 }

@@ -2,6 +2,8 @@ import {useState, useEffect} from 'react';
 import {useParams} from 'react-router-dom';
 import axios from 'axios';
 import './detailsPage.css';
+import Header from '../../components/header/Header';
+import Footer from '../../components/footer/Footer';
 
 function DetailsPage({imdbid}) {
     const {id} = useParams();
@@ -17,6 +19,8 @@ function DetailsPage({imdbid}) {
     }, [])
 
     return (
+            <>
+                <Header />
                 <article className="detail-info">
                     <section>
                         <p className="bold">{activeMovie.Title}</p>
@@ -33,6 +37,8 @@ function DetailsPage({imdbid}) {
                     <p className="bold">Genres:</p>                   
                     <p>{activeMovie.Genre}</p>
                 </article>  
+                <Footer />
+            </>
     )
 }
 
