@@ -1,11 +1,10 @@
 .movie-card {
-    padding: 1rem 1.5rem;
+    padding: 1rem 1rem;
     background-color: var(--dark-gray);
     color: var(--whiteish);
     display: grid;
     max-width: 360px;
     position: relative;
-
 }
 
 .movie-card__poster {
@@ -25,25 +24,45 @@
 .movie-card__icon {
     all: unset;
     aspect-ratio: 1;
-    width: 40px;
+    width: 45px;
     background-color: var(--yellow);
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
     position: absolute;
     cursor: pointer;
+    background-color: transparent;
+    transition: all .2s ease-in-out;
 }
 
-.movie-card__icon--favorite {
+.movie-card__icon:hover {
+    scale: 1.1;
+}
+
+.movie-card__icon--add-to-favorites {
     background-image: url(../../assets/not-filled-heart.svg);
     top: 15%;
     right: 15%;
 }
 
-.movie-card__icon--watchlist {
+.movie-card__icon--in-favorites {
+    background-image: url(../../assets/filled-heart.svg);
     top: 15%;
-    right: 30%;
+    right: 15%;
+    transform: rotateY(360deg);
+}
+
+.movie-card__icon--add-to-watchlist {
+    top: 15%;
+    left: 15%;
     background-image: url(../../assets/add-to-watchlist.svg);
+}
+
+.movie-card__icon--in-watchlist {
+    top: 15%;
+    left: 15%;
+    background-image: url(../../assets/in-watchlist.svg);
+    transform: rotateY(360deg);
 }
 
 

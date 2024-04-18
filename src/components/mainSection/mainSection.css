@@ -3,7 +3,7 @@
     max-width: 1200px;
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 340px));
+    grid-template-columns: repeat(auto-fit, minmax(200px, 260px));
     gap: 1.5rem;
     padding: 15rem 2rem;
 }

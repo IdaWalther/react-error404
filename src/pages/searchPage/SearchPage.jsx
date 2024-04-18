@@ -5,13 +5,13 @@ import useSearchStore from '../../store/search-store';
 
 function SearchPage() {
     const { movies } = useSearchStore();
-    console.log(movies);
+
     return (
         <>
             <Header />
             <MainSection
                 array={movies}
-                mainTitle={"your searchresults:"}
+                mainTitle={"Search results:"}
             />
         </>
     )
