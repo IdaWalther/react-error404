@@ -8,6 +8,7 @@ import Footer from '../../components/footer/Footer';
 function DetailsPage({ imdbid }) {
     const { id } = useParams();
     const [activeMovie, setActiveMovie] = useState({});
+    const imageSrc = activeMovie.Poster === "N/A" ? "/src/assets/no-picture-found.jpg" : activeMovie.Poster;
 
     useEffect(() => {
         axios.get(`http://www.omdbapi.com/?apikey=1a195302&i=${id}&plot=full`)
@@ -27,7 +28,7 @@ function DetailsPage({ imdbid }) {
                     <p className="bold">Imdb Rating: {activeMovie.imdbRating}</p>
                 </section>
                 <section>
-                    <img src={activeMovie.Poster} alt={`Poster of the movie ${activeMovie.Title}`} />
+                    <img className="poster" src={imageSrc} alt={`Poster of the movie ${activeMovie.Title}`} />
                     <p>{activeMovie.Plot}</p>
                 </section>
                 <p className="bold">Actors:</p>

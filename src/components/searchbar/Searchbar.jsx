@@ -5,6 +5,7 @@ import { useNavigate } from 'react-router-dom';
 import useSearchStore from '../../store/search-store';
 import Dropdown from '../dropdown/Dropdown';
 
+
 function Searchbar() {
 
     const [searchInput, setSearchInput] = useState('');
