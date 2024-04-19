@@ -1,5 +1,5 @@
 .footer {
-    position: fixed;
+    /* position: fixed; */
     bottom: 0;
     text-align: center;
     max-width: 1200px;
@@ -33,4 +33,5 @@
     border: none;
     align-self: center;
     justify-self: center;
+    cursor: pointer;
 }
