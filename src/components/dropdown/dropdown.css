@@ -30,4 +30,5 @@
 .dropdown-moviePoster {
     height: 3rem;
     margin-left: 5px;
+    aspect-ratio: 2/3;
 }
