@@ -39,4 +39,12 @@ main {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #ceba23;
+
+a {
+  text-decoration: none;
+}
+
+.d-none {
+  display: none;
+
 }
