@@ -21,7 +21,6 @@ body {
 
 main {
   padding-top: 10rem;
-  /*Ändrade från margin-top till padding top. */
 }
 
 ::-webkit-scrollbar {
@@ -39,6 +38,7 @@ main {
 
 ::-webkit-scrollbar-thumb:hover {
   background: #ceba23;
+}
 
 a {
   text-decoration: none;
@@ -46,5 +46,4 @@ a {
 
 .d-none {
   display: none;
-
 }

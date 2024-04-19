@@ -3,9 +3,9 @@
     max-width: 1200px;
     display: grid;
     justify-content: center;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 260px));
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
     gap: 1.5rem;
-    padding: 15rem 2rem;
+    padding: 15rem 1rem;
 }
 
 .card-section__title {
@@ -25,4 +25,17 @@
     content: "";
     margin-top: 2px;
     rotate: -1deg;
+}
+
+@media screen and (max-width: 595px) {
+
+    .card-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .card-section__title {
+        align-self: start;
+    }
 }
