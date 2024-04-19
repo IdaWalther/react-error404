@@ -22,3 +22,8 @@
     font-size: 1.3rem;
     margin-top: 1rem;
 }
+
+.poster {
+    max-width: 300px;
+    aspect-ratio: 2/3;
+}
