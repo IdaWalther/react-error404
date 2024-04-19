@@ -3,7 +3,7 @@ import axios from 'axios';
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import useSearchStore from '../../store/search-store';
-
+import Dropdown from '../dropdown/Dropdown';
 
 function Searchbar() {
 
@@ -39,7 +39,7 @@ function Searchbar() {
 
     // vid vald film - lägger in den valda filmen i inputfältet samt stänger dropdown
     const handleMovieSelect = (movie) => {
-        setSearchInput(movie.Title);
+        setSearchInput(movie.title);
         setDropdownOpen(false);
         navigate(`/detailsPage/${movie.imdbid}`);
     };
@@ -55,20 +55,7 @@ function Searchbar() {
             <div className="dropdown-container">
                 {/* Om dropdown är open, movies fungerar och längden större än 0 görs detta:*/}
                 {dropdownOpen && movies && movies.length > 0 && (
-                    <div className="dropdown">
-                        {/* Mappar igenom movies i dropdown och kallar på handleMovieSelect vid klick */}
-                        {movies.map((movie, index) => (
-                            <div
-                                key={index}
-                                className="dropdown-item"
-                                onClick={() => handleMovieSelect(movie)}
-                            >
-                                {/* Vad som visas i dropdown */}
-                                <span>{movie.title}</span>
-                                {movie.poster && <img className='dropdown-moviePoster' src={movie.poster} alt="movie-poster" />}
-                            </div>
-                        ))}
-                    </div>
+                    <Dropdown movies={movies} handleMovieSelect={handleMovieSelect} />
                 )}
             </div>
             {/* Input Searchbar och onChange  */}
