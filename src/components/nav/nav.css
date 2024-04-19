@@ -1,3 +1,30 @@
 .nav-item {
     margin: 2rem;
+    position: relative;
+
+}
+
+.nav-item__counter
+ {
+    color: var(--whiteish);
+    font-size: 1rem;
+    position: absolute;
+    width: 15px;
+    background-color: var(--blackish);
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-family: var(--header-font);
+    font-weight: bold;
+}
+
+.nav-item__counter--favorites {
+    top: 10%;
+    right: 0%;
+}
+
+.nav-item__counter--watchlist {
+    top: 10%;
+    right: -20%;
 }
