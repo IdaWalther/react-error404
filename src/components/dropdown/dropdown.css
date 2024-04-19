@@ -1,0 +1,33 @@
+.dropdown-container {
+    position: relative;
+    z-index: 999;
+}
+
+.dropdown {
+    position: absolute;
+    top: 100%;
+    margin-top: 2.9rem;
+    border-radius: 5px;
+    font-family: var(--header-font);
+    background-color: #fff;
+    width: 100%;
+    max-height: 200px;
+    overflow-y: auto;
+    z-index: 1000;
+}
+
+.dropdown-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px;
+    cursor: pointer;
+}
+
+.dropdown-item:hover {
+    background-color: #f5f5f5;
+}
+
+.dropdown-moviePoster {
+    height: 3rem;
+    margin-left: 5px;
+}
