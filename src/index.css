@@ -17,10 +17,20 @@ body {
   max-width: 1200px;
   margin: 0 auto;
   background-color: var(--blackish);
+  /* Nedanstående två rader gör layout stabil oberoende om scrollbar finns eller ej. */
+  position: relative;
+  left: calc((100vw - 100%) / 2);
 }
 
 main {
   padding-top: 10rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
 }
 
 ::-webkit-scrollbar {

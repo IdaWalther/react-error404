@@ -48,7 +48,10 @@ function Searchbar() {
     const handleSearchButtonClick = (event) => {
         event.preventDefault()
         setDropdownOpen(false);
-        navigate("/SearchPage/");
+
+        if (searchInput.length > 2) {
+            navigate("/SearchPage/");
+        }
     };
 
     return (

@@ -20,12 +20,12 @@
 }
 
 .footer-section__title::after {
-    background: linear-gradient(359deg, var(--yellow) 40%, var(--blackish) 50%);
-    height: .5rem;
-    width: 100%;
+    background: linear-gradient(179deg, var(--yellow) 40%, var(--blackish) 50%);
+    height: .3rem;
+    width: 110%;
     content: "";
     margin-top: 2px;
-    rotate: 4deg;
+    rotate: -1deg;
 }
 
 .footer-btn {
