@@ -10,17 +10,21 @@ import DetailsPage from "./pages/detailsPage/DetailsPage";
 import SearchPage from "./pages/searchPage/SearchPage";
 
 function App() {
-
+  // Importerar från både watchlistStore och favoriteStore. useFavoriteStore() returnera ett objekt.
+  // Vi hämtar enbart nycklarna setFavorites och setWatchlist.
   const { setFavorites } = useFavoriteStore();
   const { setWatchlist } = useWatchlistStore();
 
+
+  // useEffect kör sin kod enbart när det som är skrivet i dependancy array ändras. Om dependency-array lämnas tom så körs koden enbart när sidan laddas om.
+  // Då useState variabler inte har minne om du laddar om sidan. Så hämtar vi informationen från localStorage.
   useEffect(() => {
 
     const savedFavorites = localStorage.getItem("favorites");
     const savedWatchlist = localStorage.getItem("watchlist");
 
     if (savedFavorites) {
-
+      // session- och localStorage sparar sin information i strängform. Så för att kunna använda array-metoder behöver vi göra en parse.
       setFavorites(JSON.parse(savedFavorites));
 
     }

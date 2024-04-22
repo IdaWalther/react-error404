@@ -22,4 +22,9 @@
     color: #fff;
     border-color: #a2a2a2;
     font-weight: 700;
+    cursor: pointer;
+}
+
+.searchbar-btn:hover {
+    background-color: #5b5959;
 }

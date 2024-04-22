@@ -3,9 +3,10 @@ import './dropdown.css'
 
 
 function Dropdown({ movies, handleMovieSelect }) {
-    console.log(movies);
+ // movies är värdet av nyckeln movies i searchStore. handleMovieSelect är funktion från komponenten Searchbar.
     return (
         <div className="dropdown">
+            {/* För varje film i movies-array så returneras en div, med en span och img */}
             {movies.map((movie, index) => {
                 const imageSrc = movie.poster === "N/A" ? "/src/assets/no-picture-found.jpg" : movie.poster;
                 return (

@@ -53,25 +53,25 @@
 .poster-button--in-favorites {
     background-image: url(../../assets/filled-heart.svg);
     top: 5%;
-    left: 22%;
+    right: 10%;
     transform: rotateY(180deg);
 }
 
 .poster-button--add-to-favorites{
     background-image: url(../../assets/not-filled-heart.svg);
     top: 5%;
-    left: 22%;
+    right: 10%;
 }
 
 .poster-button--in-watchlist{
     top: 5%;
-    left: 3%;
+    left: 10%;
     background-image: url(../../assets/in-watchlist.svg);
     transform: rotateY(180deg);
 }
 
 .poster-button--add-to-watchlist{
     top: 5%;
-    left: 3%;
+    left: 10%;
     background-image: url(../../assets/add-to-watchlist.svg);
 }

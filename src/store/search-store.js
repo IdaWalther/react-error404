@@ -1,6 +1,7 @@
 import { create } from "zustand";
 
 const useSearchStore = create((set) => ({
+    // Fungerar som en vanlig tillståndsvariabel men setMovies gör om nycklarna i objekten till gemener.
     movies: [],
     setMovies: (newMovies) => {
         const transformedMovies = newMovies.map((movie) => {
@@ -11,6 +12,6 @@ const useSearchStore = create((set) => ({
             return lowerCasedMovie;
         });
         set({ movies: transformedMovies });
-    },
+    }
 }));
 export default useSearchStore;

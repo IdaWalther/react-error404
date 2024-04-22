@@ -1,4 +1,4 @@
-function Trailer({movie, trailer,index}) {
+function Trailer({movie, trailer}) {
 
     return (
             <article className="slide">
