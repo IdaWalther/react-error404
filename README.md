@@ -1,3 +1,6 @@
+# Kanban-tavla:
+![Bild på vår kanban-tavla på github-projects](./src/assets/kanban.png)
+
 # Gruppreflektioner
 
 Svara på var och en av frågorna nedan som grupp, minst 100 tecken per fråga.
