@@ -1,5 +1,6 @@
 import { create } from "zustand";
 
+// Fungerar precis som favorite-store. Enbart bytt ut favorite till watchlist.
 const useWatchlistStore = create((set) => ({
 
     watchlist: [],
@@ -8,7 +9,6 @@ const useWatchlistStore = create((set) => ({
 
     handleFilmToWatch: (filmToWatch, event) => set((state) => {
 
-        event.stopPropagation();
         event.preventDefault();
 
         const convertKeysToLowerCase = (obj) => {
@@ -21,11 +21,11 @@ const useWatchlistStore = create((set) => ({
 
         const filmToWatchLowercased = convertKeysToLowerCase(filmToWatch);
 
-        const existingFavoriteIndex = state.watchlist.findIndex(item => item.imdbid.toLowerCase() === filmToWatchLowercased.imdbid.toLowerCase());
+        const itemToWatchExists = state.watchlist.some(item => item.imdbid.toLowerCase() === filmToWatchLowercased.imdbid.toLowerCase());
         let updatedWatchlist;
 
-        if (existingFavoriteIndex !== -1) {
-            updatedWatchlist = state.watchlist.filter(favorite => favorite.imdbid.toLowerCase() !== filmToWatchLowercased.imdbid.toLowerCase());
+        if (itemToWatchExists) {
+            updatedWatchlist = state.watchlist.filter(watchlistItem => watchlistItem.imdbid.toLowerCase() !== filmToWatchLowercased.imdbid.toLowerCase());
         } else {
             updatedWatchlist = [...state.watchlist, { ...filmToWatchLowercased }];
         }

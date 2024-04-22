@@ -6,7 +6,7 @@ import './nav.css'
 function Nav() {
     const { favorites } = useFavoriteStore();
     const { watchlist } = useWatchlistStore();
-    console.log(favorites);
+
     return (
         <>
             <nav>
