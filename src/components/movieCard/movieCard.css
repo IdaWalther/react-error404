@@ -49,7 +49,7 @@
     background-image: url(../../assets/filled-heart.svg);
     top: 15%;
     right: 15%;
-    transform: rotateY(360deg);
+    transform: rotateY(180deg);
 }
 
 .movie-card__icon--add-to-watchlist {
@@ -62,7 +62,7 @@
     top: 15%;
     left: 15%;
     background-image: url(../../assets/in-watchlist.svg);
-    transform: rotateY(360deg);
+    transform: rotateY(180deg);
 }
 
 
