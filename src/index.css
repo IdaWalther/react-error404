@@ -1,7 +1,11 @@
 :root {
-  --blackish: #444;
-}
+  --blackish: #0B0B0C;
+  --whiteish: #fffef9;
+  --dark-gray: #1a1a1a;
+  --yellow: #f4ec1c;
 
+  --header-font: 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
 * {
   margin: 0;
@@ -11,4 +15,45 @@
 
 body {
   max-width: 1200px;
+  margin: 0 auto;
+  background-color: var(--blackish);
+  /* Nedanstående två rader gör layout stabil oberoende om scrollbar finns eller ej. */
+  position: relative;
+  left: calc((100vw - 100%) / 2);
+}
+
+main {
+  padding-top: 10rem;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+::-webkit-scrollbar {
+  width: 15px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgb(195, 195, 195);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgb(62, 62, 62);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #ceba23;
+}
+
+a {
+  text-decoration: none;
+}
+
+.d-none {
+  display: none;
 }

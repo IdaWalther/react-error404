@@ -1,0 +1,46 @@
+.carousel {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    max-width: 600px;
+    margin: 0 auto;
+    padding-top: 10rem;
+    margin-bottom: -10rem;
+}
+.btnNext {
+    position: absolute;
+    top: 65%;
+    right: -2.5rem;
+    clip-path: polygon(75% 0%, 100% 50%, 75% 100%, 0% 100%, 25% 50%, 0% 0%);
+}
+
+.btnNext img, .btnPrev img {
+    width: 50px;
+    height: 40px;
+    border-radius: 50%;
+    padding: .2rem;
+    fill: var(--whiteish);
+}
+
+.btnPrev {
+    position: absolute;
+    top: 65%;
+    left: -2.5rem;
+    clip-path: polygon(100% 0%, 75% 50%, 100% 100%, 25% 100%, 0% 50%, 25% 0%);
+}
+
+.btnNext, .btnPrev {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: .2rem;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 10%;
+    border: none;
+    transition: all .2s ease-in-out;
+}
+
+.btnNext:hover, .btnPrev:hover {
+    scale: 1.1;
+}

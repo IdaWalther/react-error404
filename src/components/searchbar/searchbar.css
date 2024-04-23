@@ -1,0 +1,30 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+.searchbar {
+    padding: 0.65rem;
+    border-radius: 5px 0 0 5px;
+    width: 15rem;
+    min-width: 10rem;
+    font-size: medium;
+    font-family: var(--header-font);
+}
+
+.searchbar-btn {
+    padding: 0.6rem;
+    border-radius: 0 5px 5px 0;
+    font-family: var(--header-font);
+    font-size: medium;
+    background-color: #666666;
+    color: #fff;
+    border-color: #a2a2a2;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.searchbar-btn:hover {
+    background-color: #5b5959;
+}
