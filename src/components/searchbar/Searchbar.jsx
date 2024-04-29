@@ -29,8 +29,11 @@ function Searchbar() {
         };
 
         //Om searchInput är inte är tom - getMovie (annars setMovies (visar respons.data.search))
-        if (searchInput !== '') {
+        if (searchInput.length > 2) {
             getMovies();
+        }
+        if (searchInput.length < 3) {
+            setMovies([]);
         }
     }, [searchInput]);
 
@@ -73,6 +76,7 @@ function Searchbar() {
                 placeholder="search movie..."
                 value={searchInput}
                 onChange={handleInputChange}
+                aria-label='search bar'
             />
             {/* Input searchBtn */}
             <input className='searchbar-btn'

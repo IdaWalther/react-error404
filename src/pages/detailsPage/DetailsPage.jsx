@@ -2,8 +2,6 @@ import { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
 import './detailsPage.css';
-import Header from '../../components/header/Header';
-import Footer from '../../components/footer/Footer';
 import useFavoriteStore from '../../store/favorites-store';
 import useWatchlistStore from '../../store/watchlist-store';
 
@@ -20,8 +18,7 @@ function DetailsPage() {
             .then(response => {
                 setActiveMovie(response.data);
             });
-
-    }, [])
+    }, [id])
     // Samma kod som i MovieCard-component för att skapa funktionalitet för knapparna (till rad 45).
     const handleFavorite = useFavoriteStore((state) => state.handleFavorite);
     const handleFilmToWatch = useWatchlistStore((state) => state.handleFilmToWatch);
@@ -46,11 +43,10 @@ function DetailsPage() {
 
     return (
         <>
-            <Header />
             <article className="detail-info">
-                <section>
-                    <p className="bold">{activeMovie.Title}</p>
-                    <p className="bold">Imdb Rating: {activeMovie.imdbRating}</p>
+                <section className="detail-topinfo">
+                    <h1 className="headerDetailpage">{activeMovie.Title}</h1>
+                    <h2>Imdb Rating: {activeMovie.imdbRating}</h2>
                 </section>
                 <section onMouseEnter={handleMouseEnter} onMouseLeave={handleMouseLeave}>
                     <div className="poster-wrapper">
@@ -68,18 +64,16 @@ function DetailsPage() {
                             className={`poster-button ${isHovered ? "" : "d-none"} ${alreadyInWatchlist ? "poster-button--in-watchlist" : "poster-button--add-to-watchlist"}`}
                             onClick={(event) => handleFilmToWatch(activeMovie, event)}>
                         </button>
-
                     </div>
                     <p>{activeMovie.Plot}</p>
                 </section>
-                <p className="bold">Actors:</p>
+                <h2 className="sub-title">Actors:</h2>
                 <p>{activeMovie.Actors}</p>
-                <p className="bold">Director:</p>
+                <h2 className="sub-title">Director:</h2>
                 <p>{activeMovie.Director}</p>
-                <p className="bold">Genres:</p>
+                <h2 className="sub-title">Genres:</h2>
                 <p>{activeMovie.Genre}</p>
             </article>
-            <Footer />
         </>
     )
 }
