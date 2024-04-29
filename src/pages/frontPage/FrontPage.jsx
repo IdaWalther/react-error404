@@ -5,9 +5,7 @@ import './frontPage.css';
 import useTop20Store from '../../store/top20-store';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
-import Header from '../../components/header/Header';
 import MainSection from '../../components/mainSection/MainSection';
-import Footer from '../../components/footer/Footer';
 
 //Fischer-yates shuffle: https://medium.com/@omar.rashid2/fisher-yates-shuffle-a2aa15578d2f
 //Tar emot datan från api genom parametern array
@@ -64,7 +62,6 @@ function FrontPage() {
 
     return (
         <div className="frontPage">
-            <Header />
             <section className="carousel">
                 {
                     fiveMovies.map((movie, index) => (
@@ -88,7 +85,6 @@ function FrontPage() {
                 array={top20}
                 mainTitle={"TOP 20 LIST:"}
             />
-            <Footer />
         </div>
     );
 }

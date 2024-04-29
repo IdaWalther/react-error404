@@ -1,5 +1,3 @@
-import Footer from '../../components/footer/Footer';
-import Header from '../../components/header/Header'
 import MainSection from '../../components/mainSection/MainSection';
 import useFavoriteStore from "../../store/favorites-store";
 
@@ -9,13 +7,11 @@ function FavoritesPage() {
 
     return (
         <>
-            <Header />
             {/* Skickar med en array som prop till MainSection. I det här fallet är arrayen favorites. Skickar också med en sträng för att sätta h1-elementet */}
             <MainSection
                 array={favorites}
                 mainTitle={"YOUR FAVORITES:"}
             />
-            <Footer />
         </>
     )
 }

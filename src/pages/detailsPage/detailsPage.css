@@ -17,8 +17,17 @@
     margin-bottom: 2rem;
 }
 
-.bold {
+.detail-topinfo {
+    display: flex;
+    align-items: center;
+}
+
+.headerDetailpage {
     font-weight: bold;
+    font-size: 2rem;
+}
+
+.sub-title {
     font-size: 1.3rem;
     margin-top: 1rem;
 }
@@ -46,7 +55,7 @@
     transition: all .2s ease-in-out;
 }
 
-.poster-button:hover{
+.poster-button:hover {
     scale: 1.1;
 }
 
@@ -57,20 +66,20 @@
     transform: rotateY(180deg);
 }
 
-.poster-button--add-to-favorites{
+.poster-button--add-to-favorites {
     background-image: url(../../assets/not-filled-heart.svg);
     top: 5%;
     right: 10%;
 }
 
-.poster-button--in-watchlist{
+.poster-button--in-watchlist {
     top: 5%;
     left: 10%;
     background-image: url(../../assets/in-watchlist.svg);
     transform: rotateY(180deg);
 }
 
-.poster-button--add-to-watchlist{
+.poster-button--add-to-watchlist {
     top: 5%;
     left: 10%;
     background-image: url(../../assets/add-to-watchlist.svg);
