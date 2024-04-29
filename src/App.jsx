@@ -8,6 +8,8 @@ import FavoritesPage from './pages/favoritesPage/FavoritesPage';
 import WatchListPage from './pages/watchListPage/WatchListPage';
 import DetailsPage from "./pages/detailsPage/DetailsPage";
 import SearchPage from "./pages/searchPage/SearchPage";
+import Header from "./components/header/Header";
+import Footer from "./components/footer/Footer";
 
 function App() {
   // Importerar från både watchlistStore och favoriteStore. useFavoriteStore() returnera ett objekt.
@@ -37,6 +39,7 @@ function App() {
 
   return (
     <>
+      <Header />
       <Routes>
         <Route path="/" element={<FrontPage />} />
         <Route path="/FavoritesPage" element={<FavoritesPage />} />
@@ -44,6 +47,7 @@ function App() {
         <Route path="/detailspage/:id" element={<DetailsPage />} />
         <Route path="/SearchPage/" element={<SearchPage />} />
       </Routes>
+      <Footer />
     </>
   )
 }
